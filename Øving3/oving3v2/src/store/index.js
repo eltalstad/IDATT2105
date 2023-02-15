@@ -7,21 +7,19 @@ export const useFormStore = defineStore({
     email: "",
     message: "",
   }),
-  getters: {},
+
   actions: {
     setName(name) {
       this.name = name;
     },
+    getName() {
+      return this.name;
+    },
     setEmail(email) {
       this.email = email;
     },
-    setMessage(message) {
-      this.message = message;
-    },
-    reset() {
-      this.name = "";
-      this.email = "";
-      this.message = "";
+    getEmail() {
+      return this.email;
     },
   },
 });

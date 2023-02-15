@@ -1,34 +1,36 @@
 <template>
+  <h1>Form</h1>
   <div class="form-container">
-    <h1>Form</h1>
-    <BaseInput
-      id="name"
-      v-model="name"
-      label="Name"
-      placeholder="Enter your name"
-      type="text"
-      required
-    />
+    <form action="" @submit.prevent="onSubmit">
 
-    <BaseInput
-      id="email"
-      v-model="email"
-      label="Email"
-      placeholder="Enter your email"
-      type="email"
-      required
-    />
+      <label>Full name: </label>
+      <BaseInput
+          id="name"
+          v-model="name"
+          type="text"
+          required
+      />
 
-    <BaseInput
-      id="message"
-      v-model="message"
-      label="Message"
-      placeholder="Enter your message"
-      type="text"
-      required
-    />
+      <label>Email: </label>
+      <BaseInput
+        id="email"
+        v-model="email"
+        placeholder="Enter your email"
+        type="email"
+        required
+      />
 
-    <button type="submit" @click="validate">Submit</button>
+      <label>Message: </label>
+      <BaseInput
+        id="message"
+        v-model="message"
+        type="text"
+        required
+      />
+      <button type="submit" @click="validate()" :disabled="isDisabled">
+        Submit
+      </button>
+    </form>
   </div>
 </template>
 
@@ -51,27 +53,68 @@ export default {
   },
   methods: {
     validateName() {
-      if (this.name === "" || this.name === null || this.name) {
+      if (this.name === "" || this.name === null) {
         alert("Please enter a name");
       } else {
-        this.validateEmail();
+        return true;
       }
     },
     validateEmail() {
-      const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(!regex.test(this.email)) {
-        alert("Please enter a valid email address");
-        this.email = "";
+      const regex =
+        /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+      if (this.email === "" || this.email === null) {
+        alert("Please enter an email");
+      } else if (!regex.test(this.email)) {
+        alert("Please enter a valid email");
       } else {
+        return true;
+      }
+    },
+    validateMessage() {
+      if (this.message === "" || this.message === null) {
+        alert("Please enter a message");
+      } else {
+        return true;
+      }
+    },
+    validate() {
+      if (
+        this.validateName() &&
+        this.validateEmail() &&
+        this.validateMessage()
+      ) {
         this.submitForm();
       }
     },
-
     submitForm() {
-      this.$store
-    }
-  }
+      const formStore = useFormStore();
+      formStore.setName(this.name);
+      formStore.setEmail(this.email);
+
+      const data = {
+        name: this.name,
+        email: this.email,
+        message: this.message,
+      };
+      axios
+        .post("http://localhost:3000/dummyform", data)
+        .then((response) => {
+          console.log(response);
+          alert("Form submitted successfully");
+          this.name = formStore.getName();
+          this.email = formStore.getEmail();
+          this.message = "";
+        })
+        .catch((error) => {
+          console.log(error);
+          alert("Form submission failed");
+        });
+    },
+  },
+  computed: {
+    isDisabled() {
+      return this.name === "" || this.email === "" || this.message === "";
+    },
+  },
 };
-
 </script>
-
