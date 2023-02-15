@@ -1,23 +1,24 @@
-import {createRouter, createWebHistory} from 'vue-router'
-import CalculatorView from '../views/CalculatorView.vue'
-import FormView from "@/views/FormView.vue";
+import { createRouter, createWebHistory } from "vue-router";
+import CalculatorView from "../views/CalculatorView.vue";
+import FormView from "../views/FormView.vue";
+import process from "eslint-plugin-vue/lib/configs/base";
 
 const routes = [
-    {
-        path: '/',
-        name: 'CalculatorView',
-        component: CalculatorView
-    },
-    {
-        path: '/form',
-        name: 'FormView',
-        component: FormView
-    }
-    ]
+  {
+    path: "/",
+    name: "calculator",
+    component: CalculatorView,
+  },
+  {
+    path: "/form",
+    name: "form",
+    component: FormView,
+  },
+];
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes
-    })
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+});
 
-export default router
+export default router;
