@@ -1,13 +1,14 @@
-import {test, expect} from 'vitest'
-import {mount}} from '@vue/test-utils'
-import {createPinia} from 'pinia'
-import Form from '../Form.vue'
+import { beforeEach, it, describe, test, expect } from "vitest";
+import { mount } from "@vue/test-utils";
+import { createPinia, setActivePinia } from "pinia";
+import FormPage from "../FormPage.vue";
 
-test('Form', () => {
-    const Pinia = createPinia()
-  const wrapper = mount(Form, {global: {plugins: [Pinia]}})
+test("Mount FormPage", () => {
+  const wrapper = mount(FormPage);
+  expect(wrapper.text()).toContain("Form");
+});
 
-  expect(wrapper.html()).toContain('Name')
-  expect(wrapper.html()).toContain('Email')
-  expect(wrapper.html()).toContain('Message')
-})
+test("FormPage has a form", () => {
+  const wrapper = mount(FormPage);
+  expect(wrapper.find("form").exists()).toBe(true);
+});

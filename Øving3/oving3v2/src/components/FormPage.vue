@@ -27,7 +27,7 @@
         type="text"
         required
       />
-      <button type="submit" @click="validate()" :disabled="isDisabled">
+      <button id="submit" @click="validate()" :disabled="isDisabled">
         Submit
       </button>
     </form>
@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import BaseInput from "@/components/BaseInput.vue";
-import { useFormStore } from "@/store";
+import BaseInput from "./BaseInput.vue";
+import { useFormStore } from "../store";
 import axios from "axios";
 
 export default {
@@ -97,7 +97,7 @@ export default {
         message: this.message,
       };
       axios
-        .post("http://localhost:3000/dummyform", data)
+        .post("http://localhost:3000/form", data)
         .then((response) => {
           console.log(response);
           alert("Form submitted successfully");
@@ -107,7 +107,6 @@ export default {
         })
         .catch((error) => {
           console.log(error);
-          alert("Form submission failed");
         });
     },
   },

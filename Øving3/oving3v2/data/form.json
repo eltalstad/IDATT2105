@@ -1,7 +1,112 @@
 {
-  "dummyform": {
-    "name": "Eirik Leer Talstad",
-    "email": "eleertalstad@gmail.com",
-    "message": "4234234"
-  }
+  "form": [
+    {
+      "name": "Eirik Leer Talstad",
+      "email": "eleertalstad@gmail.com",
+      "message": "456",
+      "id": "1"
+    },
+    {
+      "name": "Eirik Leer Talstad",
+      "email": "eleertalstad@gmail.com",
+      "message": "123",
+      "id": "7Urxs1e"
+    },
+    {
+      "name": "Eirik Leer Talstad",
+      "email": "eleertalstad@gmail.com",
+      "message": "789",
+      "id": "NBAktio"
+    },
+    {
+      "name": "Eirik Leer Talstad",
+      "email": "eleertalstad@gmail.com",
+      "message": "123",
+      "id": "jbL4b6g"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "zxXTKNC"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "123",
+      "id": "IlCZxQn"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "uHzFvd6"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "pvUCir-"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "M8k90DX"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "9myAFW-"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "mkRIMkc"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "_vcEhxl"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "UsdYkhX"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "i_rBlTW"
+    },
+    {
+      "name": "Eirik Leer Talstad",
+      "email": "eleertalstad@gmail.com",
+      "message": "123",
+      "id": "1M2HaWX"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "aTPjo9Y"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "zwXfC6l"
+    },
+    {
+      "name": "Petter Pettersen",
+      "email": "petter@pettersen.no",
+      "message": "Hello world!",
+      "id": "KEVlMI8"
+    }
+  ]
 }

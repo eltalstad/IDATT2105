@@ -1,0 +1,16 @@
+// Vitest Snapshot v1
+
+exports[`Calculator > renders correctly 1`] = `
+"<h1 data-v-3efd3246=\\"\\" id=\\"title\\">Calculator</h1>
+<div data-v-3efd3246=\\"\\" class=\\"page\\">
+  <div data-v-3efd3246=\\"\\" class=\\"calculator\\">
+    <div data-v-3efd3246=\\"\\" class=\\"display\\"></div><button data-v-3efd3246=\\"\\">C</button><button data-v-3efd3246=\\"\\">DEL</button><button data-v-3efd3246=\\"\\">+/-</button><button data-v-3efd3246=\\"\\" class=\\"operator\\">/</button><button data-v-3efd3246=\\"\\">7</button><button data-v-3efd3246=\\"\\">8</button><button data-v-3efd3246=\\"\\">9</button><button data-v-3efd3246=\\"\\" class=\\"operator\\">*</button><button data-v-3efd3246=\\"\\">4</button><button data-v-3efd3246=\\"\\">5</button><button data-v-3efd3246=\\"\\">6</button><button data-v-3efd3246=\\"\\" class=\\"operator\\">-</button><button data-v-3efd3246=\\"\\">1</button><button data-v-3efd3246=\\"\\">2</button><button data-v-3efd3246=\\"\\">3</button><button data-v-3efd3246=\\"\\" class=\\"operator\\">+</button><button data-v-3efd3246=\\"\\"></button><button data-v-3efd3246=\\"\\">0</button><button data-v-3efd3246=\\"\\">.</button><button data-v-3efd3246=\\"\\" class=\\"operator equals\\">=</button>
+  </div>
+</div>
+<div data-v-3efd3246=\\"\\" class=\\"logBox\\">
+  <h1 data-v-3efd3246=\\"\\">Log:</h1>
+  <div data-v-3efd3246=\\"\\" class=\\"log\\">
+    <ul data-v-3efd3246=\\"\\"></ul>
+  </div><button data-v-3efd3246=\\"\\" id=\\"clearLog\\">Clear log</button>
+</div>"
+`;

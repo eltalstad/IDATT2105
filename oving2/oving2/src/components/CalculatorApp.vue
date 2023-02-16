@@ -156,7 +156,7 @@ export default {
       <button @click="appendNumber('5')">5</button>
       <button @click="appendNumber('6')">6</button>
       <button class="operator" @click="minus">-</button>
-      <button id="number1" @click="appendNumber('1')">1</button>
+      <button @click="appendNumber('1')">1</button>
       <button @click="appendNumber('2')">2</button>
       <button @click="appendNumber('3')">3</button>
       <button class="operator" @click="plus">+</button>
