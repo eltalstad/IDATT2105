@@ -118,3 +118,67 @@ export default {
   },
 };
 </script>
+
+<style>
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+button:disabled:hover {
+  background-color: #ccc;
+}
+
+input {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+input:invalid:focus {
+  border: 1px solid red;
+}
+
+input:valid:focus {
+  border: 1px solid green;
+}
+
+</style>
