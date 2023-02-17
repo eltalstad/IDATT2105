@@ -1,3 +1,43 @@
+<template>
+  <h1 id="title">Calculator</h1>
+  <div class="page">
+    <div class="calculator">
+      <div class="display"> {{ currentNumber }} </div>
+      <button @click="clear">C</button>
+      <button @click="del">DEL</button>
+      <button @click="sign">+/-</button>
+      <button id="divide" class="operator" @click="divide">/</button>
+      <button id="number7" @click="appendNumber('7')">7</button>
+      <button id="number8" @click="appendNumber('8')">8</button>
+      <button id="number9" @click="appendNumber('9')">9</button>
+      <button class="operator" @click="multiply">*</button>
+      <button id="number4" @click="appendNumber('4')">4</button>
+      <button id="number5" @click="appendNumber('5')">5</button>
+      <button id="number6" @click="appendNumber('6')">6</button>
+      <button class="operator" @click="minus">-</button>
+      <button id="number1" @click="appendNumber('1')">1</button>
+      <button id="number2" @click="appendNumber('2')">2</button>
+      <button id="number3" @click="appendNumber('3')">3</button>
+      <button id="plus" class="operator" @click="plus">+</button>
+      <button id="number0" @click="appendNumber('0')">0</button>
+      <button id="decimal" @click="dot">.</button>
+      <button id="equals" class="operator equals" @click="equals">=</button>
+    </div>
+  </div>
+
+  <div class="logBox">
+    <h1>Log:</h1>
+    <div class="log">
+      <ul>
+        <li v-for="calculation in log" :key="calculation">
+          {{ calculation }}
+        </li>
+      </ul>
+    </div>
+    <button @click="clearLog" id="clearLog">Clear log</button>
+  </div>
+</template>
+
 <script>
 export default {
   name: "CalculatorApp",
@@ -138,47 +178,6 @@ export default {
   },
 };
 </script>
-
-<template>
-  <h1 id="title">Calculator</h1>
-  <div class="page">
-    <div class="calculator">
-      <div class="display"> {{ currentNumber }} </div>
-      <button @click="clear">C</button>
-      <button @click="del">DEL</button>
-      <button @click="sign">+/-</button>
-      <button class="operator" @click="divide">/</button>
-      <button @click="appendNumber('7')">7</button>
-      <button @click="appendNumber('8')">8</button>
-      <button @click="appendNumber('9')">9</button>
-      <button class="operator" @click="multiply">*</button>
-      <button @click="appendNumber('4')">4</button>
-      <button @click="appendNumber('5')">5</button>
-      <button @click="appendNumber('6')">6</button>
-      <button class="operator" @click="minus">-</button>
-      <button id="number1" @click="appendNumber('1')">1</button>
-      <button @click="appendNumber('2')">2</button>
-      <button @click="appendNumber('3')">3</button>
-      <button class="operator" @click="plus">+</button>
-      <button></button>
-      <button @click="appendNumber('0')">0</button>
-      <button @click="dot">.</button>
-      <button class="operator equals" @click="equals">=</button>
-    </div>
-  </div>
-
-  <div class="logBox">
-    <h1>Log:</h1>
-    <div class="log">
-      <ul>
-        <li v-for="calculation in log" :key="calculation">
-          {{ calculation }}
-        </li>
-      </ul>
-    </div>
-    <button @click="clearLog" id="clearLog">Clear log</button>
-  </div>
-</template>
 
 <style scoped>
 #title {
