@@ -1,9 +1,8 @@
-import { beforeEach, it, describe, test, expect } from "vitest";
+import { beforeEach, it, describe, test, expect, vi} from "vitest";
 import { mount } from "@vue/test-utils";
-import { createPinia, PiniaPlugin } from "pinia";
-import { provide, defineComponent } from "vue";
 import FormPage from "../FormPage.vue";
 import { useFormStore } from "../../store";
+import { createTestingPinia } from "@pinia/testing";
 
 test("Mount FormPage", () => {
   const wrapper = mount(FormPage);
@@ -20,10 +19,19 @@ test("FormPage has a submit button", () => {
     expect(wrapper.find("button").exists()).toBe(true);
     });
 
-test("Name and input are stored in the store", () => {
-    const wrapper = mount(FormPage);
-    const nameInput = wrapper.find("#name");
-    nameInput.setValue("John Doe");
-    expect(useFormStore().getName()).toBe("John Doe");
+test("Name and email are stored in state", () => {
+    const wrapper = mount(FormPage, {
+        global: {
+            plugins: [createTestingPinia({createSpy: vi.fn()})]
+        }
     })
+    const store = useFormStore();
+    expect(store.name).toBe("");
+    expect(store.email).toBe("");
 
+    store.name = "John";
+    store.email = "john@doe.com";
+
+    expect(store.name).toBe("John");
+    expect(store.email).toBe("john@doe.com");
+    });

@@ -20,4 +20,8 @@ const router = createRouter({
     routes
 })
 
+router.beforeEach((to) => {
+    const formStore = useFormStore();
+})
+
 export default router

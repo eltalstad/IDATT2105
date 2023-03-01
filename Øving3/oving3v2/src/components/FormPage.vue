@@ -1,10 +1,11 @@
 <template>
-  <h1>Form</h1>
+  <h1 id="title">Form</h1>
   <div class="form-container">
     <form action="" @submit.prevent="onSubmit">
 
       <label>Full name: </label>
       <BaseInput
+          class="input"
           id="name"
           v-model="name"
           type="text"
@@ -13,6 +14,7 @@
 
       <label>Email: </label>
       <BaseInput
+        class="input"
         id="email"
         v-model="email"
         placeholder="Enter your email"
@@ -22,6 +24,7 @@
 
       <label>Message: </label>
       <BaseInput
+        class="input"
         id="message"
         v-model="message"
         type="text"
@@ -39,15 +42,18 @@ import BaseInput from "./BaseInput.vue";
 import { useFormStore } from "../store";
 import axios from "axios";
 
+const formStore = useFormStore();
+
 export default {
   name: "FormPage",
+
   components: {
     BaseInput,
   },
   data() {
     return {
-      name: "",
-      email: "",
+      name: formStore.getName(),
+      email: formStore.getEmail(),
       message: "",
     };
   },
@@ -119,6 +125,12 @@ export default {
 </script>
 
 <style>
+
+#title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -140,13 +152,21 @@ label {
   margin-bottom: 10px;
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+.input {
+  margin-bottom: 20px;
 }
 
-button:hover {
-  background-color: #3e8e41;
+#submit {
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#submit:disabled {
+  background-color: #ccc;
 }
 
 button:disabled:hover {
@@ -179,5 +199,7 @@ input:invalid:focus {
 input:valid:focus {
   border: 1px solid green;
 }
+
+
 
 </style>

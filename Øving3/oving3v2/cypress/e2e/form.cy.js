@@ -1,6 +1,6 @@
 describe("Fill out form and submit", () => {
   it("Visits the form page, fills out form and submits", () => {
-    cy.visit("http://192.168.0.139:8080/form");
+    cy.visit("http://localhost:8080/form");
     cy.get("#name").type("Petter Pettersen");
     cy.get("#email").type("petter@pettersen.no");
     cy.get("#message").type("Hello world!");
@@ -14,7 +14,15 @@ describe("Fill out form and submit", () => {
 
 describe("Submit button is disabled when form is not filled out", () => {
   it("Visits the form page, and checks if submit button is disabled when form is empty", () => {
-    cy.visit("http://192.168.0.139:8080/form");
+    cy.visit("http://localhost:8080/form");
     cy.get("#submit").should("be.disabled");
   });
+});
+
+describe("input field works", () => {
+    it("Visits the form page, and checks if input field works", () => {
+        cy.visit("http://localhost:8080/form");
+        cy.get("#name").type("Petter Pettersen");
+        cy.get("#name").should("have.value", "Petter Pettersen");
+    });
 });

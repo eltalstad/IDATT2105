@@ -1,112 +1,46 @@
 {
   "form": [
     {
-      "name": "Eirik Leer Talstad",
-      "email": "eleertalstad@gmail.com",
-      "message": "456",
-      "id": "1"
+      "name": "name",
+      "email": "email",
+      "message": "message",
+      "id": "id"
     },
     {
       "name": "Eirik Leer Talstad",
       "email": "eleertalstad@gmail.com",
       "message": "123",
-      "id": "7Urxs1e"
-    },
-    {
-      "name": "Eirik Leer Talstad",
-      "email": "eleertalstad@gmail.com",
-      "message": "789",
-      "id": "NBAktio"
+      "id": "H06m9n5"
     },
     {
       "name": "Eirik Leer Talstad",
       "email": "eleertalstad@gmail.com",
       "message": "123",
-      "id": "jbL4b6g"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "zxXTKNC"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "123",
-      "id": "IlCZxQn"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "uHzFvd6"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "pvUCir-"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "M8k90DX"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "9myAFW-"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "mkRIMkc"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "_vcEhxl"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "UsdYkhX"
-    },
-    {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "i_rBlTW"
+      "id": "eaaEnb2"
     },
     {
       "name": "Eirik Leer Talstad",
       "email": "eleertalstad@gmail.com",
       "message": "123",
-      "id": "1M2HaWX"
+      "id": "QaVpZ0u"
     },
     {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "aTPjo9Y"
+      "name": "Eirik Leer Talstad",
+      "email": "eleertalstad@gmail.com",
+      "message": "123",
+      "id": "oxz0TUE"
     },
     {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "zwXfC6l"
+      "name": "Eirik Leer Talstad",
+      "email": "eleertalstad@gmail.com",
+      "message": "123",
+      "id": "DEERi7v"
     },
     {
-      "name": "Petter Pettersen",
-      "email": "petter@pettersen.no",
-      "message": "Hello world!",
-      "id": "KEVlMI8"
+      "name": "Eirik Leer Talstad",
+      "email": "eleertalstad@gmail.com",
+      "message": "123",
+      "id": "-eNYQqz"
     }
   ]
 }
