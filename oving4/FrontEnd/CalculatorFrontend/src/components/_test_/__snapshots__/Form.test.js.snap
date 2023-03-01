@@ -1,0 +1,12 @@
+// Vitest Snapshot v1
+
+exports[`Form > renders correctly 1`] = `
+"<h1>Form</h1>
+<div class=\\"form-container\\">
+  <form action=\\"\\"><label>Full name: </label>
+    <div><input id=\\"name\\" type=\\"text\\" required=\\"\\"></div><label>Email: </label>
+    <div><input id=\\"email\\" type=\\"email\\" required=\\"\\"></div><label>Message: </label>
+    <div><input id=\\"message\\" type=\\"text\\" required=\\"\\"></div><button type=\\"submit\\" disabled=\\"\\"> Submit </button>
+  </form>
+</div>"
+`;
